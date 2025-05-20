@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------------------------------------------------- header ------------------------------------------------------------- */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: -webkit-linear-gradient(left, black , black);
+}
+/* ------------------------------------------------------------- header-1 ------------------------------------------------------------- */
+@media(max-width: 768px){
+    .header-1{
+        display: none;
+    }
+}
+.header-1-search button{
+    font-weight: bold;
+}
+.header-1-list li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.header-1-link{
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #fff4e6;
+    text-shadow: 1px 1px 2px #00000033;
+}
+/* ------------------------------------------------------------- /header-1 ------------------------------------------------------------- */
+/* ------------------------------------------------------------- header-2 ------------------------------------------------------------- */
+.header-2{
+    display: none;
+}
+@media(max-width: 768px){
+    .header-2{
+        display: block;
+    }
+}
+.header-2-parent-choose{
+    width: 100%;
+}
+.header-2-parent-choose label{
+    background-color: black;
+    cursor: pointer;
+}
+.header-2-icon-1{
+    font-size: 1.5rem;
+    color: #fff4e6;
+}
+.header-2-list,.header-2-choose{
+    display: none;
+}
+.header-2-list{
+    width: 70%;
+    margin: auto;
+}
+input:checked ~ .header-2-list{
+    display: block;
+}
+.header-2 nav div .header-2-list ul li{
+    text-align: right;
+}
+.list-group-item a{
+    text-decoration: none;
+    color: black;
+}
+.list-group-item{
+    background-color: #fff8f2;
+}
+.list-group-item:hover{
+    background: -webkit-linear-gradient(right,#fff4e6,#fff4e6);
+    color: black;
+}
+/* ------------------------------------------------------------- /header-2 ------------------------------------------------------------- */
+.header-1-btn, .header-2-search .btn{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: .5em;
+    border-radius: .5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.header-1-btn:hover ,.header-2-search .btn:hover{
+    background-color: rgba(255, 255, 255, 0.568);
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.432);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+::placeholder{
+    text-align: right;
+}
+/* ------------------------------------------------------------- header ------------------------------------------------------------- */
+/* ------------------------------------------------------------- main ------------------------------------------------------------- */
+main{
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    background: url(../image/a-group-of-holy-quran-thumbnail-44551.jpeg) center /cover;
+    margin-bottom: 1rem;
+}
+.main-overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content{
+    text-align: center;
+    cursor: default;
+}
+.main-content h2{
+    color: rgba(0, 0, 0, 0.705);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 3rem;
+}
+.main-content p{
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.main-btn-1{
+    padding: .5rem;
+    border-radius: .75rem;
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border: 2px solid black;
+    font-weight: bold;
+}
+.main-btn-1:hover{
+    background-color: rgba(0, 0, 0, 0.589);
+    color: #fff9f0;
+}
+.main-btn-2{
+    padding: .5rem;
+    border-radius: .75rem;
+    background: transparent;
+    color: #fff9f0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.534);
+    font-weight: bold;
+}
+.main-btn-2:hover{
+    background-color: white;
+    color: black;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+/* ------------------------------------------------------------- /main ------------------------------------------------------------- */
+/* ------------------------------------------------------------- section-2 ------------------------------------------------------------- */
+.section-2-title ,.section-2 > p{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.479);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.section-2-line{
+    width: 20%;
+    height: .30dvh;
+    background: -webkit-linear-gradient(right,black,black);
+    border-radius: 50%;
+    margin: 1.25dvh auto;
+}
+/* -------------------------- product -------------------------- */
+.section-2-product{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    animation: animated ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes animated{
+    from{
+        scale: 0.5;
+        transform: translatex(100px);
+        clip-path: inset(100% 100% 0 0);
+        filter: blur(20px);
+    }
+    to{
+        scale: 1;
+        transform: translatex(0);
+        clip-path: inset(0 0 0 0);
+        filter: blur(0);
+    }
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 5%;
+    padding: 2rem;
+    margin-bottom: 10rem;
+    font-weight: bold;
+}
+.product .card{
+    height: 65dvh;
+}
+.card-img-top{
+    height: 50%;
+}
+@media(max-width:992px){
+    .product{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 2%;
+        padding: 2rem 0;
+    }
+}
+@media(max-width:576PX){
+    .product{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(9,1fr);
+        gap: .5%;
+        padding: 2rem 0;
+    }
+}
+/* -------------------------- /product -------------------------- */
+/* -------------------------- section-2-content -------------------------- */
+.section-2-card-title{
+    color: black;
+    font-size: 24px;
+}
+.card-text{
+    color: black;
+}
+.price span{
+    color: black;
+}
+.price bdi{
+    color: rgba(0, 0, 0, 0.459);
+}
+.section-2-btn{
+    color: white;
+    background-color: black;
+    padding: .5rem;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+.section-2-btn:hover{
+    color: rgba(0, 0, 0, 0.568);
+    background-color: rgba(255, 255, 255, 0.562);
+}
+/* -------------------------- /section-2-content -------------------------- */
+/* -------------------------- section-2-product -------------------------- */
+.section-2-product{
+    height: 20px;
+}
+/* -------------------------- /section-2-product -------------------------- */
+/* ------------------------------------------------------------- /section-2 ------------------------------------------------------------- */
+/* ------------------------------------------------------------- /section-3 ------------------------------------------------------------- */
+/* -------------------------- section-3 (title & line) -------------------------- */
+.section-3-title ,.section-2 > p{
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.section-3-line{
+    width: 17%;
+    height: .30dvh;
+    background-color: black ;
+    border-radius: 20%;
+    margin: 1.25dvh auto;
+}
+/* -------------------------- section-3 (title & line) -------------------------- */
+/* -------------------------- section-3 (button) -------------------------- */
+.section-3-parent-button{
+    display: flex;
+    justify-content: center;
+}
+.section-3-parent-button button{
+    padding: .5rem;
+    border-radius: .75rem;
+    background: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.425);
+    margin-right: 5px;
+}
+.section-3-parent-button #clear{
+    background-color: #f9ede2;
+    color: black;
+    border: 1px solid #e1c3b5;
+}
+.section-3-parent-button #clear:hover{
+    background-color: #fff4e6;
+    color: #7b2d22;
+    box-shadow: 0 1px 4px rgb(0, 0, 0, 0.1);
+}
+.section-3-parent-button #show_price{
+    background-color: white;
+    color: black;
+    border: none;
+}
+.section-3-parent-button #show_price:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.15);
+}
+/* -------------------------- /section-3 (button) -------------------------- */
+.section-3-parent{
+    height: 90dvh;
+    padding: 5dvh 5dvh;
+    margin: 3dvh 1em;
+    border-radius: 1rem;
+    box-shadow: 1px 3px 10px #000000b2;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+/* -------------------------- all-products & all-price -------------------------- */
+.parent-all-products ,.parent-all-price{
+    width: 100%;
+    border-radius: 1.5em;
+    background: -webkit-linear-gradient(right,black,black,black,black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+}
+.parent-all-products{
+    margin-bottom: 10dvh;
+    height: 60dvh;
+}
+.parent-all-price{
+    height: 10dvh;
+}
+.all-products ,.all-price{
+    width: 99%;
+    height: 95%;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+.all-products{
+    background-color: white;
+    color: black;
+}
+.all-price{
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+/* -------------------------- /all-products & all-price -------------------------- */
+/* ------------------------------------------------------------- /section-3 ------------------------------------------------------------- */
+
+
